@@ -11,9 +11,9 @@ import { useState } from "react";
 export default function LoginPage() {
   const [form, setForm] = useState({ email: "", password: "" });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,8 +87,11 @@ export default function LoginPage() {
                     </a>
                   </p>
                   <p className="text-sm text-muted">
-                    Don't have an account?{" "}
-                    <a href="/register" className="text-decoration-none fw-semibold">
+                    {"Don&apos;t have an account? "}
+                    <a
+                      href="/register"
+                      className="text-decoration-none fw-semibold"
+                    >
                       Register
                     </a>
                   </p>
