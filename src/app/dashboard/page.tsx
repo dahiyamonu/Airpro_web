@@ -5,7 +5,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Bell, Search, LayoutDashboard, ListChecks, FolderKanban, Upload, Calendar } from "lucide-react";
+import { Bell, LayoutDashboard, ListChecks, FolderKanban, Upload, Calendar } from "lucide-react";
 
 export default function DashboardPage() {
   return (
