@@ -1,21 +1,21 @@
 import React from "react";
-import MenuTitle from "./menu-title";
 import MenuItem from "./menu-item";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import Link from "next/link";
-import { LightDarkToggle } from "@/components/ui/light-dark-toggle";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { ThemeToggle } from "./Themetoggle";
 
 export default function MainMenu({ className }: { className?: string }) {
   return (
     <div className={cn("bg-muted overflow-auto p-4 flex flex-col", className)}>
       <div className="border-b dark:border-b-black border-b-zinc-300 pb-4">
-        <MenuTitle />
+        <Image src="/logo.png" alt="Logo" width={100} height={100} className="text-center" />
       </div>
       <div className="py-4 grow">
         <MenuItem href="/dashboard">My dashboard</MenuItem>
-        <MenuItem href="/dashboard/teams">Teams</MenuItem>
-        <MenuItem href="/dashboard/employees">Employees</MenuItem>
+        <MenuItem href="/dashboard/Packages">Package</MenuItem>
+        <MenuItem href="/dashboard/Products">Products</MenuItem>
         <MenuItem href="/dashboard/account">Account</MenuItem>
         <MenuItem href="/dashboard/settings">Settings</MenuItem>
       </div>
@@ -28,7 +28,9 @@ export default function MainMenu({ className }: { className?: string }) {
         <Link href="/" className="hover:underline">
           Logout
         </Link>
-        <LightDarkToggle className="ml-auto" />
+        <div className="ml-auto">
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );

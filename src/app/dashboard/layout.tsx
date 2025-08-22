@@ -15,7 +15,7 @@ export default function DashboardLayout({
       </div>
       {/** overflow-auto will only show scroll bar if there is content scrollable */}
       <div className="overflow-auto py-2 px-4">
-        <h1 className="pb-4">Welcome back, Ali!</h1>
+        <h1 className="pb-4">Welcome to Airpro For Elevating Businesses, Simplifying Solutions.</h1>
         {children}
       </div>
     </div>
