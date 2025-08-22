@@ -4,14 +4,14 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Input } from "./input";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
-import { set } from "date-fns";
 
-export interface PasswordInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+// Use a type alias instead of an empty interface
+export type PasswordInputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputProps>(
   ({ className, type, ...props }, ref) => {
     const [showPassword, setShowPassword] = React.useState(false);
+
     return (
       <div className="relative">
         <Input
@@ -31,6 +31,7 @@ const PasswordInput = React.forwardRef<HTMLInputElement, PasswordInputProps>(
     );
   }
 );
+
 PasswordInput.displayName = "PasswordInput";
 
 export { PasswordInput };
